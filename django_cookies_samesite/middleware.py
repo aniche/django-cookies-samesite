@@ -86,6 +86,6 @@ class CookiesSameSite(MiddlewareMixin):
             for cookie in self.protected_cookies:
                 if cookie in response.cookies:
                     response.cookies[cookie]['samesite'] = self.samesite_flag
-                    id self.samesite_flag == 'None': response.cookies[cookie]['Secure'] ='1'
+                    if self.samesite_flag == 'None': response.cookies[cookie]['Secure'] ='1'
 
         return response
